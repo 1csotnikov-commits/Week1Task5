@@ -11,9 +11,9 @@
 //   - входные токены делятся на "кэш-попадание" (cache hit) и "кэш-промах" (cache miss).
 //   Пиковые часы: 01:00–04:00 и 06:00–10:00 UTC в будни; всё остальное — внепиковые.
 //
-// Groq (allam-2-7b): бесплатная модель — в списке моделей Groq API у неё нет поля pricing.
+// Groq (groq/compound): бесплатная агентная система — в списке моделей Groq API у неё нет поля pricing.
 //   Модель llama-3.3-70b-versatile удалена из девелоперского (бесплатного) тарифа,
-//   поэтому выбрана доступная бесплатная текстовая модель.
+//   поэтому выбрана доступная бесплатная модель.
 const MODELS = [
   {
     key: 'deepseek-flash',
@@ -40,9 +40,9 @@ const MODELS = [
     }
   },
   {
-    key: 'groq-allam',
-    name: 'Groq ALLaM-2 7B',
-    model: 'allam-2-7b',
+    key: 'groq-compound',
+    name: 'Groq Compound',
+    model: 'groq/compound',
     endpoint: 'https://api.groq.com/openai/v1/chat/completions',
     pricing: {
       type: 'flat',
