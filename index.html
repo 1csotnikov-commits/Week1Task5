@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение ответов трёх LLM</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Сравнение ответов трёх LLM</h1>
+    <p class="subtitle">
+      Один запрос — три модели: DeepSeek V4 Flash, DeepSeek V4 Pro и Groq.
+      Для каждой измеряются время ответа, количество токенов и стоимость.
+    </p>
+
+    <form id="form" novalidate>
+      <label class="field-label" for="prompt">Текст запроса</label>
+      <textarea id="prompt" rows="5" placeholder="Введите общий текст запроса…"></textarea>
+
+      <div class="keys-heading">API-ключи (используются только в этой вкладке, нигде не сохраняются)</div>
+      <div id="key-inputs" class="key-grid"></div>
+
+      <div class="actions">
+        <button id="submit" type="submit">Отправить</button>
+        <span id="spinner" class="spinner" hidden aria-label="Загрузка"></span>
+        <span id="loading-text" class="loading-text" hidden>Загрузка…</span>
+      </div>
+
+      <p id="global-error" class="global-error" hidden></p>
+    </form>
+
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
