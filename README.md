@@ -10,7 +10,7 @@
 |-----------|--------|----------|
 | DeepSeek  | `deepseek-v4-flash` | `https://api.deepseek.com/chat/completions` |
 | DeepSeek  | `deepseek-v4-pro`   | `https://api.deepseek.com/chat/completions` |
-| Groq      | `llama-3.3-70b-versatile` | `https://api.groq.com/openai/v1/chat/completions` |
+| Groq      | `allam-2-7b` | `https://api.groq.com/openai/v1/chat/completions` |
 
 ## Как запустить
 
@@ -31,9 +31,8 @@
   (`https://api-docs.deepseek.com/quick_start/pricing/`). Учитываются пиковые
   и внепиковые часы (внепиковые в 2 раза дешевле), а также разделение входных
   токенов на кэш-попадание и кэш-промах.
-- **Groq `llama-3.3-70b-versatile`** — последняя известная публичная цена;
-  на момент создания приложения модель показывается как «Contact Sales»,
-  поэтому тариф — разумное допущение.
+- **Groq `allam-2-7b`** — бесплатная модель (в списке моделей Groq API у неё нет
+  поля `pricing`), поэтому стоимость $0.
 
 Формула стоимости:
 `(input_tokens * price_input + output_tokens * price_output) / 1_000_000`.
